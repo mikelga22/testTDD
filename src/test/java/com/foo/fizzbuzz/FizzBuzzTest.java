@@ -28,4 +28,9 @@ public class FizzBuzzTest extends TestCase {
         assertEquals(fizzBuzz.apply(3), "fizz");
     }
 
+    @Test
+    void shouldReturnBuzzWhen5(){
+        assertEquals(fizzBuzz.apply(5), "buzz");
+    }
+
 }
