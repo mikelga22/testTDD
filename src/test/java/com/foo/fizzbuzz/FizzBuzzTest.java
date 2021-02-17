@@ -33,4 +33,7 @@ public class FizzBuzzTest extends TestCase {
         assertEquals(fizzBuzz.apply(5), "buzz");
     }
 
+    @Test
+    void shouldReturnBuzzWhen15() {assertEquals(fizzBuzz.apply(15),"fizzbuzz");}
+
 }
