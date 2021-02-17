@@ -14,13 +14,18 @@ public class FizzBuzzTest extends TestCase {
     }
 
     @Test
-    void shouldRetur1When1(){
+    void shouldReturn1When1(){
         assertEquals(fizzBuzz.apply(1), "1");
     }
 
     @Test
-    void shouldRetur2When2(){
+    void shouldReturn2When2(){
         assertEquals(fizzBuzz.apply(2), "2");
+    }
+
+    @Test
+    void shouldReturnFizzWhen3(){
+        assertEquals(fizzBuzz.apply(3), "fizz");
     }
 
 }
