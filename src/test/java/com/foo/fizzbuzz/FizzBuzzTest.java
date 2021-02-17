@@ -9,31 +9,47 @@ public class FizzBuzzTest extends TestCase {
     private FizzBuzz fizzBuzz;
 
     @BeforeEach
-    void before(){
+    void before() {
         fizzBuzz = new FizzBuzz();
     }
 
     @Test
-    void shouldReturn1When1(){
+    void shouldReturn1When1() {
         assertEquals(fizzBuzz.apply(1), "1");
     }
 
     @Test
-    void shouldReturn2When2(){
+    void shouldReturn2When2() {
         assertEquals(fizzBuzz.apply(2), "2");
     }
 
     @Test
-    void shouldReturnFizzWhen3(){
+    void shouldReturnFizzWhen3() {
         assertEquals(fizzBuzz.apply(3), "fizz");
     }
 
     @Test
-    void shouldReturnBuzzWhen5(){
+    void shouldReturnBuzzWhen5() {
         assertEquals(fizzBuzz.apply(5), "buzz");
     }
 
     @Test
-    void shouldReturnBuzzWhen15() {assertEquals(fizzBuzz.apply(15),"fizzbuzz");}
+    void shouldReturnFizzBuzzWhen15() {
+        assertEquals(fizzBuzz.apply(15), "fizzbuzz");
+    }
+
+    @Test
+    void shouldReturnFizzWhenMultipleOf3() {
+        Integer baseNumber = 4;
+        assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
+        baseNumber = 1;
+        assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
+        baseNumber = 2;
+        assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
+        baseNumber = 3;
+        assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
+        baseNumber = 6;
+        assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
+    }
 
 }
