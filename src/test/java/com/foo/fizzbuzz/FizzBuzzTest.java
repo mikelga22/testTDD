@@ -52,4 +52,18 @@ public class FizzBuzzTest extends TestCase {
         assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
     }
 
+    @Test
+    void shouldReturnBuzzWhenMultipleOf5() {
+        Integer baseNumber = 4;
+        assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
+        baseNumber = 1;
+        assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
+        baseNumber = 2;
+        assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
+        baseNumber = 3;
+        assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
+        baseNumber = 6;
+        assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
+    }
+
 }
