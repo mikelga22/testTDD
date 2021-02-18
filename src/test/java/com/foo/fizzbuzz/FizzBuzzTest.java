@@ -48,7 +48,7 @@ public class FizzBuzzTest extends TestCase {
         assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
         baseNumber = 3;
         assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
-        baseNumber = 6;
+        baseNumber = 7;
         assertEquals(fizzBuzz.apply(baseNumber * 3), "fizz");
     }
 
@@ -60,10 +60,23 @@ public class FizzBuzzTest extends TestCase {
         assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
         baseNumber = 2;
         assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
-        baseNumber = 3;
+        baseNumber = 5;
         assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
-        baseNumber = 6;
+        baseNumber = 7;
         assertEquals(fizzBuzz.apply(baseNumber * 5), "buzz");
+    }
+    @Test
+    void shouldReturnFizzBuzzWhenMultipleOf3And5() {
+        Integer baseNumber = 4;
+        assertEquals(fizzBuzz.apply(baseNumber * 5*3), "fizzbuzz");
+        baseNumber = 1;
+        assertEquals(fizzBuzz.apply(baseNumber * 5*3), "fizzbuzz");
+        baseNumber = 2;
+        assertEquals(fizzBuzz.apply(baseNumber * 5*3), "fizzbuzz");
+        baseNumber = 5;
+        assertEquals(fizzBuzz.apply(baseNumber * 5*3), "fizzbuzz");
+        baseNumber = 7;
+        assertEquals(fizzBuzz.apply(baseNumber * 5*3), "fizzbuzz");
     }
 
 }
